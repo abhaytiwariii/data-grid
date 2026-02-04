@@ -59,7 +59,7 @@ export const useGridEdit = (initialData: GridRow[]) => {
         // Success? Do nothing, the UI is already correct.
       } catch (error) {
         // D. ROLLBACK! The API failed, so we revert to the old value.
-        console.error(
+        console.log(
           "Validation failed, rolling back.",
           error ? error : "Error",
         );
@@ -88,7 +88,7 @@ export const useGridEdit = (initialData: GridRow[]) => {
 
   return {
     data,
-    setData, 
+    setData,
     editingCell,
     startEdit,
     cancelEdit,
